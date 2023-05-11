@@ -4,14 +4,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import './App.css';
 
 
-import { Routes, Route } from "react-router-dom"
-
-
 import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 
-import HomePage from './Pages/HomePage'
-import SobreNosotros from './Pages/SobreNosotros'
+
 
 
 function App() {

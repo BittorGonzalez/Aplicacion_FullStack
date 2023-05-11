@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+:root {
+    --bg-primary: #edf2ef;
+    --bg-secondary: #212738;
+    --bg-third: #EF6351;
+    --white-text: #F5F5F5;
+    --caption-color: #5299D3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html{
+    overflow-x:hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+    background-color: var(--bg-primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar{
+    width:16em;
+    min-height:100vh;
+    height:100%;
+    background-color:var(--bg-secondary);
 }
 
-.App-link {
-  color: #61dafb;
+.navbar{
+    background-color: var(--bg-third);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.h-separator{
+    width:100%;
+    border:1px solid var(--white-text);
+}
+
+.sidebar .logo i, .sidebar li i{
+    color:var(--caption-color);
+}
+
+.sidebar li a, .sidebar .logo a {
+    text-decoration: none;
+    color: var(--white-text) ;
+    cursor: pointer;
+}
+
+
+.sidebar li:not(:first-child){
+    margin-top:1.5em;
+}
+
+.sidebar li:hover{
+    background-color:var(--bg-third);
+}
+
+.sidebar li:hover > a > i  {
+   color: var(--white-text);
+}
+
+input.form-control {
+    height: 36px;
+    margin-top: 1px;
+}
+
+.input-group .btn {
+    background-color: var(--caption-color);
+    color:var(--white-text);
+}
+
+.configs li i, .account-info span{
+    color:var(--white-text)
+}
+
+.configs li i:hover{
+    color:var(--caption-color);
+    cursor:pointer;
+}
+
+.account-info span{
+    margin-top:-10px;
+}
+.account-info h5{
+    color:var(--bg-primary)
 }

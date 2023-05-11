@@ -3,12 +3,11 @@ const cors = require('cors');
 const app = express();
 const sql = require('mssql');
 
-
 // Configuración de la conexión a la base de datos
 const dbConfig = {
     user: 'sa',
     password: '050119',
-    server: 'DESKTOP-FB28FV6',
+    server: 'WSTSMARTLOG17',
     database: 'Galys_prueba',
     options: {
         trustServerCertificate: true
@@ -24,15 +23,18 @@ sql.connect(dbConfig, (err) => {
     }
 });
 
+//Middleware
+app.use(cors())
+
 // Configuración de las rutas de la API
-app.get('/registros', (req, res) => {
-    const query = 'SELECT * FROM lal';
+app.get('/', (req, res) => {
+    const query = 'USE Galys_prueba; SELECT * FROM core.PERMISOS';
     sql.query(query, (err, result) => {
         if (err) {
             console.log(err);
             res.send('Error al obtener los registros');
         } else {
-            res.send("hola");
+            res.send(result.recordset);
         }
     });
 });

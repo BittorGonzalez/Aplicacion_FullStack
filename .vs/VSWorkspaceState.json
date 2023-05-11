@@ -5,8 +5,11 @@
     "\\Back\\server",
     "\\Front",
     "\\Front\\client",
-    "\\Front\\client\\src"
+    "\\Front\\client\\public",
+    "\\Front\\client\\public\\img",
+    "\\Front\\client\\src",
+    "\\Front\\client\\src\\Components",
+    "\\Front\\client\\src\\Pages"
   ],
-  "SelectedNode": "\\Front\\client\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }

@@ -28,7 +28,7 @@ app.use(cors())
 
 // Configuración de las rutas de la API
 app.get('/', (req, res) => {
-    const query = 'USE Galys_prueba; SELECT * FROM core.PERMISOS';
+    const query = 'USE Galys_prueba; SELECT * FROM dbo.MAESTRO_ARTICULOS';
     sql.query(query, (err, result) => {
         if (err) {
             console.log(err);
@@ -38,6 +38,8 @@ app.get('/', (req, res) => {
         }
     });
 });
+
+
 
 // Iniciar el servidor
 const port = process.env.PORT || 3000;

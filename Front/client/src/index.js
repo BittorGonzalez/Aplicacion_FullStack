@@ -11,7 +11,10 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
     <React.StrictMode>
-         <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+        
     </React.StrictMode>
     
 );

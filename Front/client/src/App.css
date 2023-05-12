@@ -10,13 +10,19 @@ body, html{
     overflow-x:hidden;
 }
 
+.wrap{
+    min-height:100vh;
+    height:100%;
+}
 main {
     background-color: var(--bg-primary);
+   
+
 }
 
 .sidebar{
     width:16em;
-    min-height:100vh;
+
     height:100%;
     background-color:var(--bg-secondary);
 }

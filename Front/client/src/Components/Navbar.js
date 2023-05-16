@@ -29,12 +29,13 @@ function Navbar() {
 
             <div className='login col-3 d-flex align-items-center ps-4'>
                 <div className='account-img'>
-                    <img className='rounded-pill' src={process.env.PUBLIC_URL + '/img/icono_usuario.jpg'} width="40px" height="40px" />
+                    <img alt='icono' className='rounded-pill' src={process.env.PUBLIC_URL + '/img/icono_usuario.jpg'} width="40px" height="40px" />
                 </div>
 
                 <div className='account-info d-flex flex-column ms-3'>
                     <h5 className='fs-5 fw-bold'>James Doe</h5>
                     <span className=''>Director</span>
+                   
                 </div>
             </div>
             

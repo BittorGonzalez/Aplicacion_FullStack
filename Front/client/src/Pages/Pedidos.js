@@ -13,8 +13,8 @@ function Pedidos() {
     }, []);
 
     return (
-        <div>
-            <h2>Hola desde Pedidos</h2>
+        <div className='mt-5'>
+            <h2>Consultar datos</h2>
             {registros.map(registro => (
                 <li key={registro.IdGrupo}>{registro.Descripcion} &nbsp; {registro.Proceso}</li>
             ))}

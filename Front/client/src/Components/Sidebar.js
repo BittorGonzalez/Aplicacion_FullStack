@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
             <div className='logo pb-2'>
 
-                <Link to='/' className='d-flex align-items-center text-decoration-none'>
+                <Link to='/Dashboard' className='d-flex align-items-center text-decoration-none'>
                     <i className='bi bi-nut-fill fs-1'></i>
                     <span className='fs-5 fw-semibold ms-2'>AplicacionWeb</span>
                 </Link>

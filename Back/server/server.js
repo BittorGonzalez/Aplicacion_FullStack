@@ -52,6 +52,21 @@ app.get('/entradas_lineas', (req, res) => {
     });
 });
 
+app.post('/login', (req, res) => {
+    const { username, password } = req.body
+    const values = [username, password]
+    sql.query('SELECT * FROM login WHERE username = ? AND password = ?', values, (err, result) => {
+        if (err) {
+            return res.json("Error")
+        } else {
+            if (result.length > 0) {
+                return res.json("Correcto")
+            } else {
+                return res.json("Fallo")
+            }
+        }
+    }
+})
 
 // Iniciar el servidor
 const port = process.env.PORT || 3000;

@@ -89,3 +89,7 @@ input.form-control {
     background: rgb(9,9,121);
     background: linear-gradient(31deg, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);
 }
+
+#login_bg h2{
+    font-size:5em;
+}

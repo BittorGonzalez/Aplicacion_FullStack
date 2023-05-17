@@ -18,7 +18,7 @@ function Consulta() {
 
     return (
 
-        <div>
+        <div className=''>
             <h2>Segunda consulta a base de datos</h2>
             <table className="table mt-4">
                 <thead>

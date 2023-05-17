@@ -19,7 +19,8 @@ import Dashboard from "../Pages/Dashboard";
 
 
 
-function DashboardLayout() {
+function DashboardLayout(props) {
+    const ComponenteMostrar = props.componenteMostrar;
 
 
     return (
@@ -32,10 +33,8 @@ function DashboardLayout() {
                 <Navbar />
 
                 <main className='col p-5'>
-                    <Routes>
-                        <Route path='/' element={<Dashboard />}></Route>
-                        <Route path='/Consulta' element={<Consulta />}></Route>
-                    </Routes>
+                    <ComponenteMostrar/>
+                  
                 </main>
             </div>
         </div>

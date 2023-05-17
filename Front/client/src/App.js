@@ -1,53 +1,33 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import Sidebar from './Components/Sidebar';
-import Navbar from './Components/Navbar';
-
-import Dashboard from './Pages/Dashboard';
-import Pedidos from './Pages/Pedidos';
 
 
 
+
+import {Routes, Route } from 'react-router-dom'
+
+
+
+import Login from "./Pages/Login";
+import Consulta from "./Pages/Consulta";
+
+import DashboardLayout from "./Components/DashboardLayout";
 
 
 function App() {
     
 
     return (
-
-      
-        <BrowserRouter>
-            <div className='wrap d-flex flex-wrap'>
-
-
-
-                <div className=''>
-                    <Sidebar />
-                </div>
-
-                <div className='col d-flex flex-column'>
-                    <Navbar />
-
-                    <main className='col p-5'>
-                        <Routes>
-                            <Route path="/" element={<Dashboard />} />
-                            <Route path="/Pedidos" element={<Pedidos />} />
-
-
-                        </Routes>
-
-
-                    </main>
-                </div>
-
-
-            </div>
-        </BrowserRouter>
-           
+        <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/Dashboard/*" element={<DashboardLayout />}>
+                <Route index element={<DashboardLayout />} />
+                <Route path="Consulta" element={<Consulta />} />
+                {/* Agrega más rutas de componentes según sea necesario */}
+            </Route>
+        </Routes>
 
        
 

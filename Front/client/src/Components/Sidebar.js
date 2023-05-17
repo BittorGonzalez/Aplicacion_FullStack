@@ -19,12 +19,20 @@ import { Link } from 'react-router-dom';
             <hr className='h-separator' />
             <ul className='list-unstyled p-2 w-100'>
                 <li className='text-white w-100 p-1 rounded'>
-                    <Link to='/'>
+                    <Link to='/Dashboard'>
                         <i className="bi bi-clipboard-check me-4 fs-4 ps-2"></i>
                         <span className='fs-5'>Dashboard</span>
                     </Link>
                  
                     
+                </li>
+
+                <li className='text-white w-100 p-1 rounded'>
+                    <Link to='/Consulta'>
+                        <i className="bi bi-cup-hot me-4 fs-4 ps-2"></i>
+                        <span className='fs-5'>Consulta</span>
+                    </Link>
+
                 </li>
 
                 <li className='text-white w-100 p-1 rounded'>

@@ -84,3 +84,8 @@ input.form-control {
 .account-info h5{
     color:var(--bg-primary)
 }
+
+#login_bg {
+    background: rgb(9,9,121);
+    background: linear-gradient(31deg, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);
+}

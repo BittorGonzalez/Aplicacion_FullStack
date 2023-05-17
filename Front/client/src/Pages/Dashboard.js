@@ -9,7 +9,7 @@ function Dashboard() {
     const [registros, setRegistros] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000')
+        fetch('http://localhost:3000/maestro_articulos')
             .then(response => response.json())
             .then(data => setRegistros(data));
     }, []);
@@ -30,14 +30,16 @@ function Dashboard() {
                 </thead>
                 <tbody>
                     {registros.map(registro => (
+
                         <tr key={registro.CodigoArticulo}>
                             <th scope="row">{registro.CodigoArticulo}</th>
                             <td className="">{registro.DenomArticulo}</td>
-                            <td>{registro.Descrip_Unidad_Carga}</td>
-                            <td>{registro.Descrip_Zona_Picking}</td>
-                            <td>{registro.Descrip_Zona_Pulmon}</td>
+                            <td>{registro.descUnidCarga}</td>
+                            <td>{registro.DenominacionZona}</td>
+                            <td>{registro.zonaPulmon}</td>
                         </tr>
                     ))}
+
                    
                 </tbody>
             </table>

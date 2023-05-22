@@ -3,14 +3,21 @@ const cors = require('cors');
 const app = express();
 const sql = require('mssql');
 
+
+
+
+
+
+
 // Configuración de la conexión a la base de datos
 const dbConfig = {
     user: 'sa',
     password: '050119',
-    server: 'WSTSMARTLOG17',
+    server: 'LAPTOP-8OKMGBPU',
     database: 'Galys_prueba',
     options: {
-        trustServerCertificate: true
+        trustServerCertificate: true,
+        charset: 'UTF-8'
     }
 };
 
@@ -24,6 +31,7 @@ sql.connect(dbConfig, (err) => {
 });
 
 //Middleware
+app.use(express.json())
 app.use(cors())
 
 // Configuración de las rutas de la API
@@ -53,19 +61,25 @@ app.get('/entradas_lineas', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const { username, password } = req.body
-    const values = [username, password]
-    sql.query('SELECT * FROM login WHERE username = ? AND password = ?', values, (err, result) => {
+
+    const consulta = "SELECT * FROM Usuarios WHERE Usuario = @username AND Contrasena = @password";
+    const request = new sql.Request();
+
+    request.input('username', sql.VarChar, req.body.username);
+    request.input('password', sql.VarChar, req.body.password);
+
+    request.query(consulta, (err, data) => {
         if (err) {
-            return res.json("Error")
-        } else {
-            if (result.length > 0) {
-                return res.json("Correcto")
-            } else {
-                return res.json("Fallo")
-            }
+            console.log(err);
+            return res.json("Error en la consulta");
         }
-    }
+
+        if (data.recordset.length > 0) {
+            return res.json("Login correcto");
+        } else {
+            return res.json("No hay registros");
+        }
+    });
 })
 
 // Iniciar el servidor

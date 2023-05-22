@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Back",
+    "\\Back\\server",
+    "\\Front",
+    "\\Front\\client",
+    "\\Front\\client\\src",
+    "\\Front\\client\\src\\Pages",
+    "\\Front\\client\\src\\Routes"
   ],
-  "SelectedNode": "\\C:\\Users\\txort\\Source\\Repos\\O",
+  "SelectedNode": "\\Back\\server\\server.js",
   "PreviewInSolutionExplorer": false
 }

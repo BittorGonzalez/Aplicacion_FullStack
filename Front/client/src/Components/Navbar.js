@@ -1,7 +1,12 @@
 import React from 'react';
 
 
+
+// Puedes utilizar la variable username aquí
+
+
 function Navbar() {
+
     return (
         <nav className="navbar d-flex justify-content-between align-items-center py-2">
             <div className='search-bar col-5 ps-5'>

@@ -3,37 +3,28 @@ import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios'
 
+
 function Login() {
 
     const navigate = useNavigate();
-    const [body, setBody] = useState({ username: '', password: '' })
 
-    const inputChange = ({target }) => {
-        const { name, value } = target
-        setBody({
-            ...body,
-            [name]:value
-        })
-    }
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        console.log(body)
-        navigate('/Dashboard');
-        axios.post('http://localhost:3000/login', body)
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        axios.post('http://localhost:3000/login', { username, password })
             .then(res => {
-
-                if (res.response === "Correcto") {
-                    navigate('/Dashboard');
-                } else {
-                    alert("No existe ese usuario")
-                }
+                if (res.data === 'Login correcto') {
                 
-            })
+                    navigate('/Dashboard');
 
-            .catch(({ response }) => {
-                console.log(response)
+                } else {
+                    alert('Usuario o contraseña incorrectos, vuelve a intentarlo')
+                }
             })
+            .catch(err => console.log(err))
     }
 
     return (
@@ -42,15 +33,15 @@ function Login() {
             <h2 className='text-light'>Bienvenido</h2>
             <h4 className='text-light'>Inicia sesion para usar la aplicacion</h4>
 
-            <form className='bg-light p-4 rounded mt-4 col-2 mt-5' onSubmit={onSubmit}>
+            <form className='bg-light p-4 rounded mt-4 col-2 mt-5' onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="usuario" className="form-label">Usuario</label>
-                    <input type="text" className="form-control" id="usuario" value={body.username} name='username' onChange={inputChange } />
+                    <input type="text" className="form-control" id="usuario" value={username} name='username' onChange={e => setUsername(e.target.value)} />
 
                 </div>
                 <div className="mb-3">
                     <label htmlFor="contraseña" className="form-label">Contrasena</label>
-                    <input type="password" className="form-control" id="contraseña" value={body.password} name='password' onChange={inputChange} />
+                    <input type="password" className="form-control" id="contraseña" value={password} name='password' onChange={e => setPassword(e.target.value)} />
                 </div>
 
                 <button type="submit" className="btn btn-primary">Iniciar sesion</button>
@@ -59,6 +50,5 @@ function Login() {
     )
 
 }
-   
 
 export default Login;

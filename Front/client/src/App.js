@@ -15,6 +15,7 @@ import Login from "./Pages/Login";
 import DashboardLayout from "./Components/DashboardLayout";
 import Consulta from "./Pages/Consulta";
 import Dashboard from "./Pages/Dashboard";
+import Articulos from "./Pages/Articulos";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/Dashboard" element={<DashboardLayout componenteMostrar={Dashboard} />}></Route>
             <Route path="/Consulta" element={<DashboardLayout componenteMostrar={Consulta} />}></Route>
+            <Route path="/Pedidos" element={<DashboardLayout componenteMostrar={Articulos} />}></Route>
 
         </Routes>
 

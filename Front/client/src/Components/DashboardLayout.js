@@ -4,17 +4,9 @@ import '../App.css';
 
 
 
-
-
-import { Routes, Route } from 'react-router-dom'
-
-
-
-import Consulta from "../Pages/Consulta";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-import Dashboard from "../Pages/Dashboard";
 
 
 

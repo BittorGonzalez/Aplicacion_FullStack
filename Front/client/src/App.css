@@ -93,3 +93,17 @@ input.form-control {
 #login_bg h2{
     font-size:5em;
 }
+
+/*TABLE*/
+
+.hOjrSE, .fjMIrw, .dILRuI {
+    background: none !important;
+}
+
+.epNTxY{
+    cursor: grab !important;
+}
+
+.rdt_TableCol{
+    resize: horizontal;
+}

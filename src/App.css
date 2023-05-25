@@ -1,0 +1,132 @@
+:root {
+    --bg-primary: #edf2ef;
+    --bg-secondary: #212738;
+    --bg-third: #EF6351;
+    --white-text: #F5F5F5;
+    --caption-color: #5299D3;
+}
+
+body, html{
+    overflow-x:hidden;
+}
+
+.wrap{
+    min-height:100vh;
+    height:100%;
+}
+main {
+    background-color: var(--bg-primary);
+   
+
+}
+
+.sidebar{
+    width:16em ;
+    height:100%;
+    background-color:var(--bg-secondary);
+}
+
+.navbar{
+    background-color: var(--bg-third);
+}
+
+.h-separator{
+    width:100%;
+    border:1px solid var(--white-text);
+}
+
+.sidebar .logo i, .sidebar li i{
+    color:var(--caption-color);
+}
+
+.sidebar li a, .sidebar .logo a {
+    text-decoration: none;
+    color: var(--white-text) ;
+    cursor: pointer;
+}
+
+
+.sidebar li:not(:first-child){
+    margin-top:1.5em;
+}
+
+.sidebar li:hover{
+    background-color:var(--bg-third);
+}
+
+.sidebar li:hover > a > i  {
+   color: var(--white-text);
+}
+
+input.form-control {
+    height: 36px;
+    margin-top: 1px;
+}
+
+.input-group .btn {
+    background-color: var(--caption-color);
+    color:var(--white-text);
+}
+
+.configs li i, .account-info span{
+    color:var(--white-text)
+}
+
+.configs li i:hover{
+    color:var(--caption-color);
+    cursor:pointer;
+}
+
+.account-info span{
+    margin-top:-10px;
+}
+.account-info h5{
+    color:var(--bg-primary)
+}
+
+#login_bg {
+    background: rgb(9,9,121);
+    background: linear-gradient(31deg, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);
+}
+
+#login_bg h2{
+    font-size:5em;
+}
+/*TABLE*/
+
+.hOjrSE, .fjMIrw, .dILRuI {
+    background: none !important;
+}
+
+.epNTxY {
+    cursor: grab !important;
+}
+
+.rdt_TableCol {
+    resize: horizontal;
+}
+
+.rs {
+    resize: both;
+    overflow: auto;
+}
+
+table.dataTable thead th.dt-colresizable-hover {
+  cursor: col-resize !important;
+
+ }
+
+div.dataTables_wrapper{
+    width:850px;
+    margin-top:2em;
+    
+}
+
+.dataTables_scrollHead {
+    margin-top: 4em;
+}
+
+label {
+    margin-bottom: 1.5em;
+}
+

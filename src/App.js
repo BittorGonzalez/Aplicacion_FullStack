@@ -15,8 +15,15 @@ import Login from "./Pages/Login";
 
 import DashboardLayout from "./Components/DashboardLayout";
 
+
 import Articulos from "./Pages/Articulos";
 import Entradas from "./Pages/Entradas";
+
+
+import Consulta from "./Pages/Consulta";
+import Dashboard from "./Pages/Dashboard";
+import Articulos from "./Pages/Articulos";
+import Prueba from "./Pages/Prueba"
 
 
 function App() {
@@ -26,9 +33,15 @@ function App() {
         <Routes>
             <Route path="/" element={<Login />} />
 
+
             <Route path="/Articulos" element={<DashboardLayout componenteMostrar={Articulos} />}></Route>
             <Route path="/Entradas" element={<DashboardLayout componenteMostrar={Entradas} />}></Route>
 
+
+            <Route path="/Dashboard" element={<DashboardLayout componenteMostrar={Dashboard} />}></Route>
+            <Route path="/Consulta" element={<DashboardLayout componenteMostrar={Consulta} />}></Route>
+            <Route path="/Pedidos" element={<DashboardLayout componenteMostrar={Articulos} />}></Route>
+            <Route path="/Prueba" element={<DashboardLayout componenteMostrar={Prueba} />}></Route>
 
         </Routes>
 

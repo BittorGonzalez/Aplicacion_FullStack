@@ -12,18 +12,30 @@ import Navbar from "./Navbar";
 
 function DashboardLayout(props) {
     const ComponenteMostrar = props.componenteMostrar;
+
     const username = props.username
 
     console.log(username)
 
+
+
+
     return (
         <div className='wrap d-flex flex-nowrap'>
             <div>
+
                 <Sidebar className=''   />
             </div>
 
             <div className='col d-flex flex-column '>
                 <Navbar username={props.username} />
+
+                <Sidebar className='' />
+            </div>
+
+            <div className='col d-flex flex-column '>
+                <Navbar />
+
 
                 <main className='col p-5'>
                     <ComponenteMostrar/>

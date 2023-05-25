@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios'
+
 import DashboardLayout from '../Components/DashboardLayout';
+
 
 
 function Login() {
@@ -21,8 +23,13 @@ function Login() {
             .then(res => {
                 if (res.data === 'Login correcto') {
 
+
                     localStorage.setItem('username', username);
                     navigate("/Articulos")
+
+                
+                    navigate('/Dashboard');
+
 
                 } else {
                     alert('Usuario o contrasena incorrectos, vuelve a intentarlo')
@@ -55,5 +62,8 @@ function Login() {
     )
 
 }
+
+
+
 
 export default Login;

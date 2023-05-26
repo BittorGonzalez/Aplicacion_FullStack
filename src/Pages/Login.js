@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios'
+import DashboardLayout from '../Components/DashboardLayout';
 
 
 function Login() {
@@ -19,8 +20,9 @@ function Login() {
         axios.post('http://localhost:3000/login', { username, password })
             .then(res => {
                 if (res.data === 'Login correcto') {
-                
-                    navigate('/Dashboard');
+
+                    localStorage.setItem('username', username);
+                    navigate("/Articulos")
 
                 } else {
                     alert('Usuario o contrasena incorrectos, vuelve a intentarlo')
@@ -48,10 +50,10 @@ function Login() {
 
                 <button type="submit" className="btn btn-primary">Iniciar sesion</button>
             </form>
+
         </div>
     )
 
 }
-
 
 export default Login;

@@ -14,10 +14,10 @@ import {Routes, Route } from 'react-router-dom'
 import Login from "./Pages/Login";
 
 import DashboardLayout from "./Components/DashboardLayout";
-import Consulta from "./Pages/Consulta";
-import Dashboard from "./Pages/Dashboard";
+
 import Articulos from "./Pages/Articulos";
-import Prueba from "./Pages/Prueba"
+import Entradas from "./Pages/Entradas";
+
 
 function App() {
     
@@ -25,10 +25,10 @@ function App() {
     return (
         <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/Dashboard" element={<DashboardLayout componenteMostrar={Dashboard} />}></Route>
-            <Route path="/Consulta" element={<DashboardLayout componenteMostrar={Consulta} />}></Route>
-            <Route path="/Pedidos" element={<DashboardLayout componenteMostrar={Articulos} />}></Route>
-            <Route path="/Prueba" element={<DashboardLayout componenteMostrar={Prueba} />}></Route>
+
+            <Route path="/Articulos" element={<DashboardLayout componenteMostrar={Articulos} />}></Route>
+            <Route path="/Entradas" element={<DashboardLayout componenteMostrar={Entradas} />}></Route>
+
 
         </Routes>
 
